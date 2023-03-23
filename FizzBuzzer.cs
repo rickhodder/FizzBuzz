@@ -7,7 +7,7 @@ public class FizzBuzzer
         
         for (int i = 1; i <= 100; i++)
         {
-            result.Add(i, "");
+            result.Add(i, i.ToString());
         }
 
         return result;
