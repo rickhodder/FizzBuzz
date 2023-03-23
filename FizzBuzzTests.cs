@@ -24,4 +24,14 @@ public class FizzBuzzTests
         var result = _sut.FizzBuzz();
         Assert.Equal(expected, result[input]);
     }    
+
+     [Theory]
+    [InlineData(5, "Buzz")]
+    [InlineData(10, "Buzz")]
+    [InlineData(20, "Buzz")]
+    public void FizzBuzz_DivisibleBy5_ReturnsFizz(int input, string expected)
+    {
+        var result = _sut.FizzBuzz();
+        Assert.Equal(expected, result[input]);
+    }    
 }
