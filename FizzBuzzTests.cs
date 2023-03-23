@@ -2,9 +2,12 @@ namespace FizzBuzz;
 
 public class FizzBuzzTests
 {
-    [Fact]
-    public void Test1()
-    {
+    private FizzBuzzer _sut;
 
+    [Fact]
+    public void CallFizzBuzzSuccessfully()
+    {
+        _sut = new FizzBuzzer();
+        var result = _sut.FizzBuzz();
     }
 }
