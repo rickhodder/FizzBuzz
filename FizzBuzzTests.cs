@@ -45,6 +45,17 @@ public class FizzBuzzTests
         Assert.Equal(expected, result[input]);
     }
 
+
+    [Theory]
+    [InlineData(35, "FizzBuzz")]
+    [InlineData(53, "FizzBuzz")]
+    
+    public void FizzBuzz_HasA3and5digit_ReturnsFizzBuzz(int input, string expected)
+    {
+        var result = _sut.FizzBuzz();
+        Assert.Equal(expected, result[input]);
+    }
+
     [Theory]
     [InlineData(5, "Buzz")]
     [InlineData(10, "Buzz")]

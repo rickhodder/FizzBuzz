@@ -7,6 +7,12 @@ public class FizzBuzzer
         
         for (int i = 1; i <= 100; i++)
         {
+            if(i.ToString().Contains("3") && i.ToString().Contains("5"))
+            {
+                result.Add(i, "FizzBuzz");
+                continue;
+            }
+            
             if(i.ToString().Contains("3"))
             {
                 result.Add(i, "Fizz");
