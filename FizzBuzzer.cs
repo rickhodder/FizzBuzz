@@ -13,6 +13,12 @@ public class FizzBuzzer
                 continue;
             }
 
+            if(i.ToString().Contains("5"))
+            {
+                result.Add(i, "Buzz");
+                continue;
+            }
+
              if(i % 3 ==0 && i % 5 ==0)
             {
                 result.Add(i, "FizzBuzz");

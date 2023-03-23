@@ -35,6 +35,15 @@ public class FizzBuzzTests
         Assert.Equal(expected, result[input]);
     }    
 
+    [Theory]
+    [InlineData(5, "Buzz")]
+    [InlineData(15, "Buzz")]
+    [InlineData(25, "Buzz")]
+    public void FizzBuzz_HasA5digit_ReturnsBuzz(int input, string expected)
+    {
+        var result = _sut.FizzBuzz();
+        Assert.Equal(expected, result[input]);
+    }
 
     [Theory]
     [InlineData(5, "Buzz")]
@@ -46,14 +55,6 @@ public class FizzBuzzTests
         Assert.Equal(expected, result[input]);
     }    
 
-    [Theory]
-    [InlineData(15, "FizzBuzz")]    
-    [InlineData(45, "FizzBuzz")]
-    public void FizzBuzz_DivisibleBy3and5_ReturnsFizzBuzz(int input, string expected)
-    {
-        var result = _sut.FizzBuzz();
-        Assert.Equal(expected, result[input]);
-    }    
 
     
 }
